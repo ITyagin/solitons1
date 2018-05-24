@@ -21,7 +21,7 @@ left_plotter::left_plotter(QWidget *parent)
 
     connect(m_timer, SIGNAL(timeout()),
             this, SLOT(handleTimeout()));
-    m_timer->setInterval(500);
+    m_timer->setInterval(45);
     m_timer->start();
 
     QHBoxLayout *buttonsLayout = new QHBoxLayout;
@@ -53,7 +53,7 @@ void left_plotter::createLeftSeries()
 
     leftChart->setTitle("Динамические солитоны");
     leftChart->legend()->hide();
-    leftChart->setAnimationOptions(QChart::AllAnimations);
+    //leftChart->setAnimationOptions(QChart::AllAnimations);
 }
 
 void left_plotter::start()
